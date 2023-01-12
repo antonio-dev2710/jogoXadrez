@@ -27,6 +27,7 @@ public class Position {
         this.column = column;
     }
 
+    //vc está sobreescreva o tooString q está na classe object
     @Override
     public String toString() {
         return "Position [row=" + row + ", column=" + column + "]";
