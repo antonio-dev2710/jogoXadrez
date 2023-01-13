@@ -1,5 +1,8 @@
 package boardGame;
 
+import chess.ChessPiece;
+import chess.ChessPosition;
+
 public class Board {
 
     private int rows;
@@ -22,11 +25,11 @@ public class Board {
     }
     
     
-    public Piece piece(int row, int columns){
-        if(!positonExist(row, columns)){
+    public Piece piece(int piece, int columns){
+        if(!positonExist(piece, columns)){
             throw new BoardException("Position not on the board");
         }
-        return pieces[row][columns];
+        return pieces[piece][columns];
     }
     public Piece piece(Position position){
         if(!positonExist(position)){
