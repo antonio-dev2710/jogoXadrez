@@ -27,6 +27,10 @@ public class Position {
         this.column = column;
     }
 
+    public void setValues(int row, int column){
+        this.row=row;
+        this.column=column;
+    }
     //vc está sobreescreva o tooString q está na classe object
     @Override
     public String toString() {
