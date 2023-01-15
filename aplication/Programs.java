@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import boardGame.Board;
@@ -12,11 +14,12 @@ public class Programs {
         System.out.println("Jogo de xadez");
         //nova partida xadrez
         ChessMatch chessMatch = new ChessMatch();
+        List<ChessPiece> captured = new ArrayList<>();
 
         while(true){
             //cirar uma interface para vizualizar o tabuleiro
             UI.clearScreen();
-            UI.printMatch(chessMatch);
+            UI.printMatch(chessMatch, captured);
             System.out.println();
             System.out.println("Source: ");
 
@@ -33,6 +36,10 @@ public class Programs {
             ChessPosition target = UI.readChessPosition(sc);
 
             ChessPiece capturPiece = chessMatch.performChessMove(source, target);
+
+            if(capturPiece!=null){
+                captured.add(capturPiece);
+            }
         }
        
 
