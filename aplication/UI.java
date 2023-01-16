@@ -60,6 +60,10 @@ public class UI {
         System.out.println("Turn : "+chessMatch.getTurn());
         System.out.println("waiting player: "+chessMatch.getCurrentPlayer());
 
+        if(chessMatch.getCheck()){
+            System.out.println("CHECK!");
+        }
+
     }
     public static void printBoard(ChessPiece[][] pieces) {
         // form para pecorrer as linhas e as colunas
