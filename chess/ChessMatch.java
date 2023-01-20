@@ -109,7 +109,7 @@ public class ChessMatch {
         //#specialmove promotion
         promoted =null;
         if( movePiece instanceof Pawn){
-            if((movePiece.getColor() == Color.WHITE && target.getRow()==0)||(movePiece.getColor() == Color.BLACK && target.getRow()==0)){
+            if((movePiece.getColor() == Color.WHITE && target.getRow()==0)||(movePiece.getColor() == Color.BLACK && target.getRow()==7)){
                 promoted= (ChessPiece) board.piece(target);
                 promoted=replacePromotedPiece("Q");
 
